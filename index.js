@@ -16,7 +16,9 @@ require("./DB/DBconnection");
 const server = express();
 
 //connecting server and fe using cors
-server.use(cors());
+server.use(cors({
+  origin: 'http://localhost:4200'
+}));
 
 //to convert all incoming json type data in to js
 server.use(express.json());
